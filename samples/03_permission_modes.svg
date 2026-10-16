@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="440" viewBox="0 0 880 440" font-family="'Yu Gothic UI','Meiryo','Hiragino Sans',sans-serif">
+  <title>権限モードの比較（安全性と自動化の度合い）</title>
+  <rect x="0" y="0" width="880" height="440" fill="#ffffff"/>
+  <text x="440" y="34" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f2937">図3　権限モード：どこまでAIに任せるか</text>
+
+  <!-- 軸 -->
+  <defs>
+    <linearGradient id="axis" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#dc2626"/>
+    </linearGradient>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3" markerHeight="3" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+  </defs>
+  <line x1="140" y1="80" x2="835" y2="80" stroke="url(#axis)" stroke-width="6" marker-end="url(#ah)"/>
+  <text x="140" y="66" font-size="13" font-weight="bold" fill="#2563eb">慎重（毎回確認）</text>
+  <text x="825" y="66" font-size="13" font-weight="bold" text-anchor="end" fill="#dc2626">自動（確認なし）</text>
+
+  <!-- Claude Code 行 -->
+  <text x="20" y="150" font-size="14" font-weight="bold" fill="#9a3412">Claude Code</text>
+  <g font-size="12">
+    <rect x="140" y="112" width="150" height="70" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="215" y="138" text-anchor="middle" font-weight="bold" fill="#1e3a8a">Plan</text>
+    <text x="215" y="158" text-anchor="middle" fill="#1e3a8a">計画だけ提示し</text>
+    <text x="215" y="174" text-anchor="middle" fill="#1e3a8a">承認まで変更しない</text>
+
+    <rect x="305" y="112" width="150" height="70" rx="6" fill="#eef2ff" stroke="#4f46e5"/>
+    <text x="380" y="138" text-anchor="middle" font-weight="bold" fill="#312e81">Manual</text>
+    <text x="380" y="158" text-anchor="middle" fill="#312e81">編集・コマンドの</text>
+    <text x="380" y="174" text-anchor="middle" fill="#312e81">たびに許可を求める</text>
+
+    <rect x="470" y="112" width="170" height="70" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+    <text x="555" y="138" text-anchor="middle" font-weight="bold" fill="#78350f">Auto（既定）</text>
+    <text x="555" y="158" text-anchor="middle" fill="#78350f">分類器が危険な操作を</text>
+    <text x="555" y="174" text-anchor="middle" fill="#78350f">判定し、多くは自動実行</text>
+
+    <rect x="655" y="112" width="170" height="70" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="740" y="138" text-anchor="middle" font-weight="bold" fill="#7f1d1d">Edit automatically</text>
+    <text x="740" y="158" text-anchor="middle" fill="#7f1d1d">ファイル編集を</text>
+    <text x="740" y="174" text-anchor="middle" fill="#7f1d1d">確認なしで行う</text>
+  </g>
+
+  <!-- Codex 行 -->
+  <text x="20" y="250" font-size="14" font-weight="bold" fill="#065f46">Codex</text>
+  <g font-size="12">
+    <rect x="140" y="212" width="230" height="70" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="255" y="238" text-anchor="middle" font-weight="bold" fill="#1e3a8a">Read-only（読み取り専用）</text>
+    <text x="255" y="258" text-anchor="middle" fill="#1e3a8a">読む・相談する・計画する</text>
+    <text x="255" y="274" text-anchor="middle" fill="#1e3a8a">変更には承認が必要</text>
+
+    <rect x="385" y="212" width="255" height="70" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+    <text x="512" y="238" text-anchor="middle" font-weight="bold" fill="#78350f">Auto（Git管理下の推奨）</text>
+    <text x="512" y="258" text-anchor="middle" fill="#78350f">作業フォルダー内の編集・実行は自動</text>
+    <text x="512" y="274" text-anchor="middle" fill="#78350f">外部・ネット接続は承認を求める</text>
+
+    <rect x="655" y="212" width="170" height="70" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="740" y="238" text-anchor="middle" font-weight="bold" fill="#7f1d1d">Full access</text>
+    <text x="740" y="258" text-anchor="middle" fill="#7f1d1d">サンドボックスなし</text>
+    <text x="740" y="274" text-anchor="middle" fill="#7f1d1d">公式も非推奨</text>
+  </g>
+
+  <!-- 初心者向けの目安 -->
+  <rect x="140" y="310" width="685" height="76" rx="8" fill="#f9fafb" stroke="#9ca3af" stroke-dasharray="5 4"/>
+  <text x="156" y="334" font-size="13" font-weight="bold" fill="#374151">初心者の目安（筆者の推奨・仮定を含みます）</text>
+  <text x="156" y="356" font-size="12" fill="#4b5563">・Gitで管理していないフォルダー → Plan / Read-only から始める</text>
+  <text x="156" y="376" font-size="12" fill="#4b5563">・Gitで管理し、こまめにコミットしている → Auto で効率よく進める　・右端の赤いモードは使わない</text>
+
+  <text x="20" y="420" font-size="11" fill="#6b7280">出典：Claude Code Docs「Use Claude Code in VS Code」「Permission modes」、OpenAI「Agent approvals &amp; security」（2026-10-17確認）。モード名は画面表記の英語のまま記載。</text>
+</svg>

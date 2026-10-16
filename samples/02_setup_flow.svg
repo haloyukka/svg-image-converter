@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="560" viewBox="0 0 880 560" font-family="'Yu Gothic UI','Meiryo','Hiragino Sans',sans-serif">
+  <title>Claude CodeとCodexの導入手順の比較</title>
+  <rect x="0" y="0" width="880" height="560" fill="#ffffff"/>
+  <text x="440" y="34" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f2937">図2　導入手順（VSCode拡張・Windows・個人サブスク）</text>
+
+  <!-- 列見出し -->
+  <rect x="150" y="54" width="330" height="36" rx="6" fill="#d97757"/>
+  <text x="315" y="78" font-size="15" font-weight="bold" text-anchor="middle" fill="#ffffff">Claude Code</text>
+  <rect x="510" y="54" width="330" height="36" rx="6" fill="#10a37f"/>
+  <text x="675" y="78" font-size="15" font-weight="bold" text-anchor="middle" fill="#ffffff">Codex</text>
+
+  <!-- 行ラベル -->
+  <g font-size="13" font-weight="bold" fill="#374151">
+    <text x="30" y="130">① 契約</text>
+    <text x="30" y="210">② 拡張を</text><text x="30" y="228">　 入れる</text>
+    <text x="30" y="300">③ 開く</text>
+    <text x="30" y="380">④ ログイン</text>
+    <text x="30" y="460">⑤ 最初の</text><text x="30" y="478">　 依頼</text>
+  </g>
+
+  <!-- Claude Code 列 -->
+  <g font-size="12" fill="#7c2d12">
+    <rect x="150" y="104" width="330" height="56" rx="6" fill="#fdf1ea" stroke="#d97757"/>
+    <text x="164" y="127">Claude Pro（月20ドル）以上の有料プラン</text>
+    <text x="164" y="147">※無料プランでは利用不可</text>
+
+    <rect x="150" y="184" width="330" height="56" rx="6" fill="#fdf1ea" stroke="#d97757"/>
+    <text x="164" y="207">Ctrl+Shift+X →「Claude Code」で検索</text>
+    <text x="164" y="227">→ インストール（VSCode 1.94.0以上）</text>
+
+    <rect x="150" y="264" width="330" height="56" rx="6" fill="#fdf1ea" stroke="#d97757"/>
+    <text x="164" y="287">ファイルを開き、エディター右上の</text>
+    <text x="164" y="307">Sparkアイコン（✻）をクリック</text>
+
+    <rect x="150" y="344" width="330" height="56" rx="6" fill="#fdf1ea" stroke="#d97757"/>
+    <text x="164" y="367">パネルの「Sign in」→ ブラウザーで承認</text>
+    <text x="164" y="387">APIキーは不要</text>
+
+    <rect x="150" y="424" width="330" height="72" rx="6" fill="#fdf1ea" stroke="#d97757"/>
+    <text x="164" y="447">「このフォルダーの構成を説明して」</text>
+    <text x="164" y="467">慣れたら /init で CLAUDE.md を作成</text>
+    <text x="164" y="487">（任意）Git for Windows を入れる</text>
+  </g>
+
+  <!-- Codex 列 -->
+  <g font-size="12" fill="#064e3b">
+    <rect x="510" y="104" width="330" height="56" rx="6" fill="#ecfdf5" stroke="#10a37f"/>
+    <text x="524" y="127">ChatGPT Plus（月20ドル）以上を推奨</text>
+    <text x="524" y="147">※Free / Go は用途・機能が限定的</text>
+
+    <rect x="510" y="184" width="330" height="56" rx="6" fill="#ecfdf5" stroke="#10a37f"/>
+    <text x="524" y="207">Ctrl+Shift+X →「Codex」で検索</text>
+    <text x="524" y="227">→ OpenAI公式の拡張をインストール</text>
+
+    <rect x="510" y="264" width="330" height="56" rx="6" fill="#ecfdf5" stroke="#10a37f"/>
+    <text x="524" y="287">サイドバーのCodexアイコンをクリック</text>
+    <text x="524" y="307">（無い場合：Codex: Open Codex Sidebar）</text>
+
+    <rect x="510" y="344" width="330" height="56" rx="6" fill="#ecfdf5" stroke="#10a37f"/>
+    <text x="524" y="367">「Sign in with ChatGPT」→ ブラウザーで承認</text>
+    <text x="524" y="387">（APIキーでも可だが従量課金）</text>
+
+    <rect x="510" y="424" width="330" height="72" rx="6" fill="#ecfdf5" stroke="#10a37f"/>
+    <text x="524" y="447">「このフォルダーの構成を説明して」</text>
+    <text x="524" y="467">慣れたら /init で AGENTS.md を作成</text>
+    <text x="524" y="487">Windowsのサンドボックス設定を完了させる</text>
+  </g>
+
+  <!-- 下向き矢印 -->
+  <g stroke="#9ca3af" stroke-width="2">
+    <line x1="490" y1="160" x2="490" y2="182"/><line x1="490" y1="240" x2="490" y2="262"/>
+    <line x1="490" y1="320" x2="490" y2="342"/><line x1="490" y1="400" x2="490" y2="422"/>
+  </g>
+
+  <text x="30" y="530" font-size="11" fill="#6b7280">価格は米ドル建ての公表値（2026-10-17確認）。プラン名・価格・画面表記は変更される可能性があります。</text>
+  <text x="30" y="548" font-size="11" fill="#6b7280">出典：Claude Code Docs「Advanced setup」「Use Claude Code in VS Code」、OpenAI「Codex IDE extension」「Pricing」</text>
+</svg>

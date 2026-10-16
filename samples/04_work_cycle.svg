@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="400" viewBox="0 0 880 400" font-family="'Yu Gothic UI','Meiryo','Hiragino Sans',sans-serif">
+  <title>AIエージェントとの基本の作業サイクル</title>
+  <rect x="0" y="0" width="880" height="400" fill="#ffffff"/>
+  <text x="440" y="34" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f2937">図4　基本の作業サイクル（両ツール共通）</text>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker>
+  </defs>
+
+  <g font-size="12" text-anchor="middle">
+    <rect x="20" y="80" width="150" height="100" rx="8" fill="#f3f4f6" stroke="#6b7280"/>
+    <text x="95" y="108" font-size="14" font-weight="bold" fill="#111827">0. 保存点</text>
+    <text x="95" y="132" fill="#374151">git commit で</text>
+    <text x="95" y="150" fill="#374151">戻れる地点を作る</text>
+
+    <rect x="195" y="80" width="150" height="100" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="270" y="108" font-size="14" font-weight="bold" fill="#1e3a8a">1. 依頼</text>
+    <text x="270" y="132" fill="#1e3a8a">目的・対象ファイル</text>
+    <text x="270" y="150" fill="#1e3a8a">・完了条件を書く</text>
+
+    <rect x="370" y="80" width="150" height="100" rx="8" fill="#eef2ff" stroke="#4f46e5"/>
+    <text x="445" y="108" font-size="14" font-weight="bold" fill="#312e81">2. 計画確認</text>
+    <text x="445" y="132" fill="#312e81">/plan で手順を出させ</text>
+    <text x="445" y="150" fill="#312e81">ずれを直す</text>
+
+    <rect x="545" y="80" width="150" height="100" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="620" y="108" font-size="14" font-weight="bold" fill="#78350f">3. 差分レビュー</text>
+    <text x="620" y="132" fill="#78350f">diff を読んで</text>
+    <text x="620" y="150" fill="#78350f">承認 / 却下 / 修正指示</text>
+
+    <rect x="720" y="80" width="140" height="100" rx="8" fill="#ecfdf5" stroke="#10a37f"/>
+    <text x="790" y="108" font-size="14" font-weight="bold" fill="#065f46">4. 動作確認</text>
+    <text x="790" y="132" fill="#065f46">実行・表示を確認し</text>
+    <text x="790" y="150" fill="#065f46">git commit</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2" fill="none">
+    <line x1="170" y1="130" x2="193" y2="130" marker-end="url(#a)"/>
+    <line x1="345" y1="130" x2="368" y2="130" marker-end="url(#a)"/>
+    <line x1="520" y1="130" x2="543" y2="130" marker-end="url(#a)"/>
+    <line x1="695" y1="130" x2="718" y2="130" marker-end="url(#a)"/>
+    <path d="M790,180 L790,230 L270,230 L270,182" marker-end="url(#a)"/>
+    <path d="M620,180 L620,196 L95,196 L95,182" stroke-dasharray="6 4" marker-end="url(#a)"/>
+  </g>
+  <text x="530" y="250" font-size="12" text-anchor="middle" fill="#374151">次の小さなタスクへ（1タスク＝1コミットが目安）</text>
+  <text x="290" y="216" font-size="12" fill="#374151">点線：うまくいかない → 保存点やチェックポイントに戻す</text>
+
+  <rect x="20" y="276" width="840" height="80" rx="8" fill="#f9fafb" stroke="#d1d5db"/>
+  <text x="36" y="300" font-size="13" font-weight="bold" fill="#374151">戻す手段</text>
+  <text x="36" y="322" font-size="12" fill="#4b5563">・Claude Code：メッセージにカーソルを合わせ「Rewind code to here」（チェックポイント機能）</text>
+  <text x="36" y="342" font-size="12" fill="#4b5563">・Codex：公式は作業前後に Git のチェックポイント（コミット）を作ることを推奨　・共通：git で直前のコミットに戻す</text>
+
+  <text x="20" y="386" font-size="11" fill="#6b7280">出典：Claude Code Docs「Use Claude Code in VS Code（Rewind with checkpoints）」、OpenAI「Codex IDE extension」（2026-10-17確認）</text>
+</svg>

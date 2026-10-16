@@ -1,0 +1,1 @@
+Happy DOM + NAPI Canvas simulation passed. Not a real browser test.

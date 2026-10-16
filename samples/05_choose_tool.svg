@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="500" viewBox="0 0 880 500" font-family="'Yu Gothic UI','Meiryo','Hiragino Sans',sans-serif">
+  <title>Claude CodeとCodexの使い分けフロー</title>
+  <rect x="0" y="0" width="880" height="500" fill="#ffffff"/>
+  <text x="440" y="34" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f2937">図5　どちらを使うか迷ったときの判断フロー（目安）</text>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker>
+  </defs>
+
+  <g font-size="13" text-anchor="middle">
+    <!-- Q1 -->
+    <rect x="290" y="56" width="300" height="56" rx="28" fill="#f3f4f6" stroke="#6b7280"/>
+    <text x="440" y="80" font-weight="bold" fill="#111827">Q1. すでに契約しているのは？</text>
+    <text x="440" y="100" font-size="11" fill="#4b5563">（追加費用をかけずに始めたい場合）</text>
+
+    <rect x="40" y="150" width="220" height="56" rx="8" fill="#fdf1ea" stroke="#d97757"/>
+    <text x="150" y="174" font-weight="bold" fill="#9a3412">Claude Pro / Max だけ</text>
+    <text x="150" y="194" font-size="12" fill="#7c2d12">→ Claude Code から始める</text>
+
+    <rect x="620" y="150" width="220" height="56" rx="8" fill="#ecfdf5" stroke="#10a37f"/>
+    <text x="730" y="174" font-weight="bold" fill="#065f46">ChatGPT Plus / Pro だけ</text>
+    <text x="730" y="194" font-size="12" fill="#064e3b">→ Codex から始める</text>
+
+    <rect x="330" y="150" width="220" height="56" rx="8" fill="#f9fafb" stroke="#6b7280"/>
+    <text x="440" y="174" font-weight="bold" fill="#111827">両方ある / これから選ぶ</text>
+    <text x="440" y="194" font-size="12" fill="#374151">→ Q2 へ</text>
+
+    <!-- Q2 -->
+    <rect x="265" y="246" width="350" height="56" rx="28" fill="#f3f4f6" stroke="#6b7280"/>
+    <text x="440" y="270" font-weight="bold" fill="#111827">Q2. その作業で一番大事なのは？</text>
+    <text x="440" y="290" font-size="11" fill="#4b5563">（両ツールとも大半の作業はこなせます）</text>
+
+    <rect x="20" y="346" width="200" height="96" rx="8" fill="#fdf1ea" stroke="#d97757"/>
+    <text x="120" y="370" font-weight="bold" fill="#9a3412">対話しながら細かく</text>
+    <text x="120" y="388" font-weight="bold" fill="#9a3412">確認・調整したい</text>
+    <text x="120" y="414" font-size="12" fill="#7c2d12">→ Claude Code</text>
+    <text x="120" y="432" font-size="11" fill="#7c2d12">（計画へのコメント・巻き戻し）</text>
+
+    <rect x="235" y="346" width="200" height="96" rx="8" fill="#ecfdf5" stroke="#10a37f"/>
+    <text x="335" y="370" font-weight="bold" fill="#065f46">長めの作業を任せて</text>
+    <text x="335" y="388" font-weight="bold" fill="#065f46">手元で別作業したい</text>
+    <text x="335" y="414" font-size="12" fill="#064e3b">→ Codex</text>
+    <text x="335" y="432" font-size="11" fill="#064e3b">（/cloud でクラウドに委任）</text>
+
+    <rect x="450" y="346" width="200" height="96" rx="8" fill="#eef2ff" stroke="#4f46e5"/>
+    <text x="550" y="370" font-weight="bold" fill="#312e81">書いた変更を</text>
+    <text x="550" y="388" font-weight="bold" fill="#312e81">別の目で点検したい</text>
+    <text x="550" y="414" font-size="12" fill="#312e81">→ 作った方と</text>
+    <text x="550" y="432" font-size="12" fill="#312e81">反対のツールでレビュー</text>
+
+    <rect x="665" y="346" width="200" height="96" rx="8" fill="#f9fafb" stroke="#6b7280"/>
+    <text x="765" y="370" font-weight="bold" fill="#111827">利用上限に</text>
+    <text x="765" y="388" font-weight="bold" fill="#111827">達してしまった</text>
+    <text x="765" y="414" font-size="12" fill="#374151">→ もう一方に切り替え</text>
+    <text x="765" y="432" font-size="11" fill="#374151">（指示書を共通化しておく）</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="1.8" fill="none">
+    <path d="M330,112 L150,148" marker-end="url(#a)"/>
+    <line x1="440" y1="112" x2="440" y2="148" marker-end="url(#a)"/>
+    <path d="M550,112 L730,148" marker-end="url(#a)"/>
+    <line x1="440" y1="206" x2="440" y2="244" marker-end="url(#a)"/>
+    <path d="M330,302 L120,344" marker-end="url(#a)"/>
+    <path d="M400,302 L335,344" marker-end="url(#a)"/>
+    <path d="M480,302 L550,344" marker-end="url(#a)"/>
+    <path d="M550,302 L765,344" marker-end="url(#a)"/>
+  </g>
+
+  <text x="20" y="476" font-size="11" fill="#6b7280">※この判断フローは公式資料の機能説明をもとにした筆者の目安です。性能の優劣を示すものではありません。</text>
+  <text x="20" y="492" font-size="11" fill="#6b7280">出典：Claude Code Docs「Use Claude Code in VS Code」、OpenAI「Codex IDE extension」「IDE commands」（2026-10-17確認）</text>
+</svg>
